@@ -1,29 +1,39 @@
-import { 
-  Typography, 
-  AppBar, 
-  CssBaseline, 
-  Toolbar, 
+import {
+  Typography,
+  AppBar,
+  CssBaseline,
+  Toolbar,
   Button,
-  Box } from '@mui/material'
-  import ImportContactsTwoToneIcon from '@mui/icons-material/ImportContactsTwoTone';
+  Box,
+} from "@mui/material";
+import ImportContactsRoundedIcon from "@mui/icons-material/ImportContactsRounded";
 
+import "./topbar.css";
 
 const Topbar = () => {
   return (
     <div>
       <Box sx={{ flexGrow: 1 }}>
         <CssBaseline />
-        <AppBar position="relative" style={{ background: "#0e6958" }}>
+        <AppBar position="relative" style={{ background: "#EEEEEE" }}>
           <Toolbar>
-            <ImportContactsTwoToneIcon />
+            <ImportContactsRoundedIcon style={{ fill: "#0072ea" }} />
             <Typography
               variant="h6"
               paddingLeft="10px"
-              color="pink"
-              sx={{ flexGrow: 1 }}>
+              color="#0072ea"
+              sx={{ flexGrow: 1 }}
+            >
               lms for ells
             </Typography>
-            <Button color="inherit">log in</Button>
+            <div className="button-container">
+              <Button
+                variant="contained"
+                color="primary"
+              >
+                log in
+              </Button>
+            </div>
           </Toolbar>
         </AppBar>
       </Box>
