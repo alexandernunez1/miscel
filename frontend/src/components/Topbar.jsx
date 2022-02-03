@@ -4,10 +4,13 @@ import {
   CssBaseline,
   Toolbar,
   Button,
+  IconButton,
   Box,
 } from "@mui/material";
-import ImportContactsRoundedIcon from "@mui/icons-material/ImportContactsRounded";
+import { ThemeOptions } from "@mui/material";
 
+import { Link } from 'react-router-dom';
+import CSEDLogo from "../iconComponents/CSEDLogo";
 import "./topbar.css";
 
 const Topbar = () => {
@@ -17,23 +20,36 @@ const Topbar = () => {
         <CssBaseline />
         <AppBar position="relative" style={{ background: "#EEEEEE" }}>
           <Toolbar>
-            <ImportContactsRoundedIcon style={{ fill: "#0072ea" }} />
+          <IconButton component={Link} to={'/'}>
+          <CSEDLogo width={50} height={50}/>
+          </IconButton>
+          
             <Typography
+            align="center"
               variant="h6"
-              paddingLeft="10px"
-              color="#0072ea"
+              color="black"
+              marginRight="80px"
               sx={{ flexGrow: 1 }}
             >
-              lms for ells
-            </Typography>
-            <div className="button-container">
-              <Button
-                variant="contained"
-                color="primary"
+              <Button 
+              style={{ color: "black"}}
+              component={Link} to={'/'}
               >
-                log in
+                home
               </Button>
-            </div>
+              <Button 
+              style={{ color: "black"}}
+              component={Link} to={'/about'}
+              >
+                about
+              </Button>
+              <Button 
+              style={{ color: "black"}}
+              component={Link} to={'/lessons'}
+              >
+                lessons
+              </Button>
+            </Typography>
           </Toolbar>
         </AppBar>
       </Box>
